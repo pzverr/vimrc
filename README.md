@@ -2,8 +2,17 @@
 ======
 Installation
 ------------
+```sh
+wget https://raw.githubusercontent.com/pzverr/vimrc/master/.vimrc
+```
+Install plugins
+===============
 To install vim plugins, follow:<br/> 
-`git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle`
+`git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle`<br/>
+
+```vim 
+:BundleInstall
+```
 
 Tricks
 ------
