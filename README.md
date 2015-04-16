@@ -2,7 +2,7 @@
 ======
 Installation
 ------------
-To install vim plugins, follow:__ 
+To install vim plugins, follow:<br/> 
 `git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle`
 
 Tricks
