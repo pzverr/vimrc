@@ -3,47 +3,26 @@
 Installation
 ------------
 To install vim plugins, follow:
-
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
 
-Полезности
+Tricks
+------
 i - insert mode
+di( - delete the text inside the brackets
+da( - delete the text with brackets
+gg - top the file
+gG - end of file
+dw - delete word
+cw - remove the word with the subsequent transition to insert mode
 
-di( - удалить текст внутри скобок
+y - copy
+p - paste
+x - cut
 
-da( - удалить вместе со скобками
-
-gg - начало файла
-
-gG - конец файла
-
-dw - удалить слово
-
-cw - удалить слово с последующим переходом в режим вставки
-
-e|
-
-w|-- переход по словам
-
-b|
-
-
-y - копировать
-
-p - вставить
-
-x - вырезать
-
-
-gcс - закомментировать строку
-
-gc - закомментировать строку вверх/вниз jk
-
+gcc - comment out the line
+gc - comment out the line up/down j/k
 
 v - visual mode
-
-shift-v - выделить строку
-
+shift-v - select a line
 shift-> - tab
-
 shift-< - untab
