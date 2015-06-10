@@ -1,24 +1,7 @@
-
-" Identify platform {
-    silent function! OSX()
-        return has('macunix')
-    endfunction
-    silent function! LINUX()
-        return has('unix') && !has('macunix') && !has('win32unix')
-    endfunction
-    silent function! WINDOWS()
-        return (has('win16') || has('win32') || has('win64'))
-    endfunction
-" }
-
-
 " Basic {
     set encoding=utf8
     if !has("gui_running")
         set t_Co=256
-    endif
-    if !WINDOWS()
-        set shell=/bin/sh
     endif
     let mapleader=","
 " }
@@ -76,6 +59,7 @@
         colorscheme tchaba2
     " }
     " Interface {
+        set cursorline
         set number
         set mousehide
         set wildmenu
@@ -90,7 +74,7 @@
 
 " Plugins {
     " NERDTree {
-        let NERDTreeShowHidden=0
+        let NERDTreeShowHidden=1
         let NERDTreeHighlightCursorline=0
     " }
     " Startify {
