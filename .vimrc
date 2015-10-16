@@ -12,6 +12,8 @@
     set lazyredraw
     set noswapfile
     set autoread
+    set nobackup
+    set nowritebackup
 " }
 
 
@@ -25,7 +27,7 @@
     Bundle 'tomtom/tcomment_vim'
     Bundle 'Yggdroot/indentLine'
     Bundle 'bling/vim-airline'
-    Bundle 'vim-scripts/tchaba'
+    Bundle 'brafales/vim-desert256'
     Bundle 'vim-scripts/vim-startify'
     filetype plugin indent on
 " }
@@ -56,7 +58,7 @@
     " }
     " Colors {
         set background=dark
-        colorscheme tchaba2
+        colorscheme desert256
     " }
     " Interface {
         set cursorline
