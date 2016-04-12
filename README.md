@@ -16,6 +16,10 @@ To install vim plugins, follow:<br/>
 
 Tricks
 ------
+* CTRL + L - Toggle NERDTree hotkey
+* CTRL + J - Prev buffer
+* CTRL + K - Next buffer
+* CTRL + T - Open terminal ( CTRL + D return to vim )
 * i - insert mode
 * di( - delete the text inside the brackets
 * da( - delete the text with brackets
