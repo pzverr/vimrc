@@ -27,7 +27,7 @@
     Bundle 'tomtom/tcomment_vim'
     Bundle 'Yggdroot/indentLine'
     Bundle 'bling/vim-airline'
-    Bundle 'brafales/vim-desert256'
+    Bundle 'vim-scripts/xoria256.vim'
     Bundle 'vim-scripts/vim-startify'
     filetype plugin indent on
 " }
@@ -58,7 +58,7 @@
     " }
     " Colors {
         set background=dark
-        colorscheme desert256
+        colorscheme xoria256
     " }
     " Interface {
         set cursorline
