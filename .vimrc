@@ -98,6 +98,7 @@
 
 " Custom {
     map <C-L> :NERDTreeToggle<CR>
+    map <C-T> :sh<CR>
     map <C-K> :bnext<CR>
     map <C-J> :bprev<CR>
 " }
