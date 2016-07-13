@@ -1,4 +1,5 @@
 " Basic {
+    set nocompatible
     set encoding=utf8
     if !has("gui_running")
         set t_Co=256
@@ -6,35 +7,30 @@
     let mapleader=","
 " }
 
-
 " Productivity {
     set ttyfast
     set lazyredraw
-    set noswapfile
     set autoread
     set nobackup
+    set noswapfile
     set nowritebackup
 " }
 
-
 " BundleVundle {
-    set nocompatible
     filetype off
     set rtp+=~/.vim/bundle/vundle/
     call vundle#rc()
     Bundle 'gmarik/vundle'
     Bundle 'scrooloose/nerdtree'
     Bundle 'tomtom/tcomment_vim'
-    Bundle 'Yggdroot/indentLine'
-    Bundle 'bling/vim-airline'
-    Bundle 'vim-scripts/xoria256.vim'
+    Bundle 'vim-airline/vim-airline'
     Bundle 'vim-scripts/vim-startify'
+    Bundle 'tpope/vim-fugitive'
+    Bundle 'blueshirts/darcula'
     filetype plugin indent on
 " }
 
-
 " Indentation {
-    set shiftround
     set tabstop=4
     set shiftwidth=4
     set smarttab
@@ -43,13 +39,11 @@
     set smartindent
 " }
 
-
 " Search {
     set hlsearch
     set incsearch
     set ignorecase
 " }
-
 
 " Interface, colors, text {
     syntax enable
@@ -57,22 +51,13 @@
         set wrap
     " }
     " Colors {
-        set background=dark
-        colorscheme xoria256
+        colorscheme darcula
     " }
     " Interface {
         set cursorline
-        set number
-        set mousehide
-        set wildmenu
-        set title
-        set showmode
-        set showcmd
         set laststatus=2
-        set ruler
     " }
 " }
-
 
 " Plugins {
     " NERDTree {
@@ -80,21 +65,20 @@
         let NERDTreeHighlightCursorline=0
     " }
     " Startify {
-        let g:startify_bookmarks = ['~/.vimrc',]
+        let g:startify_bookmarks=['~/.vimrc',]
     " }
     " Airline {
-        let g:airline_theme='dark'
-        let g:airline#extensions#tabline#enabled = 1
-        let g:airline_left_sep = ''
-        let g:airline_right_sep = ''
-        let g:airline_section_y = 'BUF: %n'
-    " }
-    " IndentLine {
-        let g:indentLine_char = '|'
-        let g:indentLine_color_term = 241
+        function! CustomBranchFormat(name)
+            return 'Git: '.a:name
+        endfunction
+
+        let g:airline#extensions#tabline#enabled=1
+        let g:airline#extensions#branch#format='CustomBranchFormat'
+        let g:airline_left_sep=''
+        let g:airline_right_sep=''
+        let g:airline_section_y='Buf: %n'
     " }
 " }
-
 
 " Custom {
     map <C-L> :NERDTreeToggle<CR>
