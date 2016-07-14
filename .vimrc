@@ -85,4 +85,5 @@
     map <C-T> :sh<CR>
     map <C-K> :bnext<CR>
     map <C-J> :bprev<CR>
+    map <C-X> :bd<CR>
 " }
