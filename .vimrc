@@ -51,7 +51,7 @@
         set wrap
     " }
     " Colors {
-        colorscheme darcula
+        colorscheme elflord
     " }
     " Interface {
         set cursorline
