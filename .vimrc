@@ -26,7 +26,8 @@
     Bundle 'vim-airline/vim-airline'
     Bundle 'vim-scripts/vim-startify'
     Bundle 'tpope/vim-fugitive'
-    Bundle 'blueshirts/darcula'
+    " Bundle 'blueshirts/darcula'
+    " Bundle 'rayburgemeestre/phpfolding.vim'
     filetype plugin indent on
 " }
 
@@ -51,7 +52,9 @@
         set wrap
     " }
     " Colors {
-        colorscheme elflord
+        " colorscheme elflord
+        " colorscheme darcula
+        colorscheme default
     " }
     " Interface {
         set cursorline
