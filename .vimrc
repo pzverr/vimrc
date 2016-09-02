@@ -60,6 +60,7 @@
         set cursorline
         set laststatus=2
     " }
+    set foldmethod=indent
 " }
 
 " Plugins {
