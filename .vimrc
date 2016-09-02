@@ -24,9 +24,10 @@
     Bundle 'scrooloose/nerdtree'
     Bundle 'tomtom/tcomment_vim'
     Bundle 'vim-airline/vim-airline'
+    Bundle 'vim-airline/vim-airline-themes'
     Bundle 'vim-scripts/vim-startify'
     Bundle 'tpope/vim-fugitive'
-    " Bundle 'blueshirts/darcula'
+    Bundle 'blueshirts/darcula'
     " Bundle 'rayburgemeestre/phpfolding.vim'
     filetype plugin indent on
 " }
@@ -76,6 +77,7 @@
             return 'Git: '.a:name
         endfunction
 
+        let g:airline_theme='sol'
         let g:airline#extensions#tabline#enabled=1
         let g:airline#extensions#branch#format='CustomBranchFormat'
         let g:airline_left_sep=''
