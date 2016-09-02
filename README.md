@@ -16,10 +16,14 @@ To install vim plugins, follow:<br/>
 
 Tricks
 ------
-* CTRL + L - Toggle NERDTree hotkey
-* CTRL + J - Prev buffer
-* CTRL + K - Next buffer
-* CTRL + T - Open terminal ( CTRL + D return to vim )
+* CTRL + L - toggle NERDTree hotkey
+* CTRL + J - prev buffer
+* CTRL + K - next buffer
+* CTRL + T - open terminal ( CTRL + D return to vim )
+* zo - open fold block
+* zc - close fold block
+* zR - open all fold blocks
+* zM - close all fold blocks
 * i - insert mode
 * di( - delete the text inside the brackets
 * da( - delete the text with brackets
