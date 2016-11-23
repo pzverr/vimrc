@@ -25,6 +25,7 @@
     Bundle 'tomtom/tcomment_vim'
     Bundle 'vim-airline/vim-airline'
     Bundle 'vim-airline/vim-airline-themes'
+    Bundle 'Yggdroot/indentLine'
     Bundle 'vim-scripts/vim-startify'
     Bundle 'tpope/vim-fugitive'
     Bundle 'blueshirts/darcula'
@@ -71,6 +72,9 @@
     " }
     " Startify {
         let g:startify_bookmarks=['~/.vimrc', '/var/www/html']
+    " }
+    " Indent Line {
+        let g:indentLine_char = '|'
     " }
     " Airline {
         function! CustomBranchFormat(name)
