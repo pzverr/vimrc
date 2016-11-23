@@ -24,11 +24,10 @@
     Bundle 'scrooloose/nerdtree'
     Bundle 'tomtom/tcomment_vim'
     Bundle 'vim-airline/vim-airline'
-    " Bundle 'vim-airline/vim-airline-themes'
+    Bundle 'vim-airline/vim-airline-themes'
     Bundle 'vim-scripts/vim-startify'
     Bundle 'tpope/vim-fugitive'
-    " Bundle 'blueshirts/darcula'
-    " Bundle 'rayburgemeestre/phpfolding.vim'
+    Bundle 'blueshirts/darcula'
     filetype plugin indent on
 " }
 
@@ -49,35 +48,36 @@
 
 " Interface, colors, text {
     syntax enable
+    " set number
     " Text {
         set wrap
     " }
     " Colors {
-        " colorscheme elflord
-        " colorscheme darcula
-        colorscheme default
+        colorscheme darcula
     " }
     " Interface {
         set cursorline
         set laststatus=2
     " }
-    " set foldmethod=indent
 " }
 
 " Plugins {
     " NERDTree {
         let NERDTreeShowHidden=1
         let NERDTreeHighlightCursorline=0
+        let NERDTreeChDirMode=2
+        let NERDTreeMinimalUI=1
+        let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$', '\.DS_Store$']
     " }
     " Startify {
-        let g:startify_bookmarks=['~/.vimrc',]
+        let g:startify_bookmarks=['~/.vimrc', '/var/www/html']
     " }
     " Airline {
         function! CustomBranchFormat(name)
             return 'Git: '.a:name
         endfunction
 
-        " let g:airline_theme='sol'
+        let g:airline_theme='bubblegum'
         let g:airline#extensions#tabline#enabled=1
         let g:airline#extensions#branch#format='CustomBranchFormat'
         let g:airline_left_sep=''
@@ -87,9 +87,19 @@
 " }
 
 " Custom {
-    map <C-L> :NERDTreeToggle<CR>
-    map <C-T> :sh<CR>
-    map <C-K> :bnext<CR>
-    map <C-J> :bprev<CR>
     map <C-X> :bd<CR>
+    map <C-T> :sh<CR>
+
+    map <F2> :NERDTreeToggle<CR>
+    nnoremap <F3> :NERDTreeFind<CR>
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+    noremap <C-K> :m .+1<CR>==
+    nnoremap <C-J> :m .-2<CR>==
+    inoremap <C-K> <Esc>:m .+1<CR>==gi
+    inoremap <C-J> <Esc>:m .-2<CR>==gi
+    vnoremap <C-K> :m '>+1<CR>gv=gv
+    vnoremap <C-J> :m '<-2<CR>gv=gv
+
+    set pastetoggle=<F10>
 " }
