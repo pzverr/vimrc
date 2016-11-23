@@ -16,10 +16,14 @@ To install vim plugins, follow:<br/>
 
 Tricks
 ------
-* CTRL + L - toggle NERDTree hotkey
-* CTRL + J - prev buffer
-* CTRL + K - next buffer
-* CTRL + T - open terminal ( CTRL + D return to vim )
+* F2 - toggle NERDTree hotkey
+* F3 - find current file in NERDTree
+* CTRL + j - down currentline
+* CTRL + k - up currentline
+* CTRL + x - close buffer
+* CTRL + p - prev buffer
+* CTRL + n - next buffer
+* CTRL + t - open terminal ( CTRL + D return to vim )
 * zo - open fold block
 * zc - close fold block
 * zR - open all fold blocks
