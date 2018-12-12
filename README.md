@@ -5,13 +5,17 @@ Installation
 ```sh
 wget https://raw.githubusercontent.com/pzverr/vimrc/master/.vimrc
 ```
-Install plugins
----------------
-To install vim plugins, follow:<br/> 
-`git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle`<br/>
 
-```vim 
-:BundleInstall
+Configuration in project's .exrc file
+-
+```vimscript
+" scp on save
+let g:enable_scp  = 1
+let g:scp_server  = "example.com"
+let g:scp_port    = 22
+let g:scp_user    = "user"
+let g:scp_local   = "/local/project/folder/"
+let g:scp_remote  = "/remote/project/folder/"
 ```
 
 Tricks
