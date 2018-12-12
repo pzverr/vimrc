@@ -63,4 +63,20 @@
             :s:^:\/\/
         endif
     endfunction
+
+    set exrc
+    set secure
+
+    function RemoteSync ()
+        if !exists("g:enable_scp") || g:enable_scp == 0
+            return
+        endif
+        let filename = expand("%:p")
+        if expand('%:t') != ".exrc"
+            let dest = substitute(filename, g:scp_local, g:scp_remote, "")
+            exec ":silent !scp -P " . g:scp_port  . " -q '" . filename . "' '" . g:scp_user . "@" . g:scp_server . ":" . dest . "'"
+        endif
+    endfunction
+
+    au BufWritePost,FileWritePost * silent call RemoteSync()
 " }
